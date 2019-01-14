@@ -1,0 +1,22 @@
+<div class="container">
+
+  <div class="jumbotron mt-3 py-4">
+    <p class="display-4 text-center">
+      Posts
+    </p>
+  </div>
+
+  <ul class="list-group my-2">
+    <li class="list-group-item" *ngFor="let post of posts"><strong>Title:</strong>{{post.title}},<strong>Body:</strong>{{post.body}}</li>
+  </ul>
+
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="post title" [(ngModel)]="post.title">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="post body" [(ngModel)]="post.body">
+  </div>
+  <button class="btn btn-primary" (click)="sendPost()">
+    Post It
+  </button>
+</div>
